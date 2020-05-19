@@ -50,6 +50,23 @@ summer_df = data[data['Country_Name'].isin(top_10_summer)]
 winter_df = data[data['Country_Name'].isin(top_10_winter)]
 top_df = data[data['Country_Name'].isin(top_10)]
 
+plt.figure(figsize=(20, 6))
+plt.bar(summer_df['Country_Name'], summer_df['Total_Summer'])
+plt.title('Top 10 Summer')
+plt.xlabel('Country Name')
+plt.ylabel('Total Medals')
+
+plt.figure(figsize=(20, 6))
+plt.bar(winter_df['Country_Name'], winter_df['Total_Winter'])
+plt.title('Top 10 Winter')
+plt.xlabel('Country Name')
+plt.ylabel('Total Medals')
+
+plt.figure(figsize=(20, 6))
+plt.bar(top_df['Country_Name'], top_df['Total_Medals'])
+plt.title('Top 10')
+plt.xlabel('Country Name')
+plt.ylabel('Total Medals')
 
 # --------------
 #Code starts here
